@@ -1,0 +1,566 @@
+/* Styles for Dylan Abbott's Caffenol Site */
+
+/* Typography */
+
+/* 
+font-family: adelle-sans, sans-serif; 300, 400, 700, 800
+font-family: adelle, serif; 300, 400, 600
+*/
+
+body {
+	font-size: 16px;
+	color: rgb(56, 30, 23);
+	line-height: 1.25;
+}
+
+h1,
+h2 {
+	font-family: adelle-sans, sans-serif;
+	font-weight: 700;
+	border-bottom: 1px solid rgb(255, 186, 135);
+}
+
+h3 {
+	font-family: adelle-sans, sans-serif;
+	font-weight: 400;
+}
+
+h4 {
+	font-family: adelle-sans, sans-serif;
+	font-weight: 400;
+	margin-bottom: 2px;
+}
+
+ul,
+li {
+	font-family: adelle-sans, sans-serif;
+	list-style-type: none;
+	padding-inline-start: 0;
+}
+
+p {
+	font-family: adelle-sans, sans-serif;
+	font-weight: 300;
+}
+
+/* Color Palette
+
+Bright Orange: (255, 119, 15) // #ff770f
+Dark Orange: (204, 95, 12) // #cc5f0c
+Pale Orange: (255, 186, 135) // #ffba87
+Dark Brown: (56, 30, 23) // #381e17
+Light Brown: (95, 75, 69) // #5f4b45
+
+*/
+
+/* Link Styles */
+
+a:link {
+	color: rgb(255, 119, 15);
+	text-decoration: none;
+}
+
+a:hover {
+	color: rgb(255, 186, 135);
+	text-decoration: underline;
+}
+
+a:active {
+	color: rgb(255, 146, 56);
+	text-decoration: underline;
+}
+
+a:visited {
+	color: rgb(204, 95, 12);
+	text-decoration: none;
+}
+
+/* Main Layout rules for mobile (480 and under) */
+
+.header {
+	background-image: url('../img/IMG_3690.jpeg');
+	background-size: cover;
+	background-position: center center;
+}
+
+.header h1 {
+	margin-top: 2em;
+}
+
+.hero {
+	background-color: rgba(117, 60, 44, 0.5);
+	color: rgb(255, 255, 255);
+	height: 100vh;
+}
+
+.main-menu {
+	text-align: center;
+	width: 100%;
+	height: auto;
+	background-color: rgba(255, 255, 255, 0.85);
+	border-radius: 6px;
+	position: fixed;
+	padding: 1rem 0 0.25rem 0;
+	top: -12.75rem;
+	z-index: 15;
+	transition: 0.7s;
+}
+
+.main-menu-show {
+	top: -1rem;
+}
+
+.main-menu li {
+	font-weight: 400;
+}
+
+.toggle-icon {
+	height: 0.8rem;
+	width: 0.8rem;
+	transition: 0.3s;
+}
+
+.toggle-icon-flip {
+	transform: rotate(-180deg);
+}
+
+.menu-icon {
+	display: none;
+}
+
+.intro {
+	column-count: 1;
+	column-gap: 0;
+}
+
+.sample-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 3px;
+	margin-top: 24px;
+}
+
+.sample-photo {
+	width: 40vw;
+	border: 3px solid rgb(0, 0, 0);
+	box-shadow: 3px 3px 3px rgba(56, 30, 23, 0.5);
+	justify-self: center;
+	transition: width 0.5s ease-in-out;
+	transition: transform 0.5s ease-in-out;
+}
+
+.sample-photo:hover {
+	z-index: 10;
+	transform: scale(1.1, 1.1);
+}
+
+.photo-1 {
+	transform: rotate(13deg);
+}
+.photo-2 {
+	transform: rotate(-4deg);
+}
+.photo-3 {
+	transform: rotate(-7deg);
+}
+.photo-4 {
+	transform: rotate(11deg);
+}
+.photo-5 {
+	transform: rotate(10deg);
+}
+.photo-6 {
+	transform: rotate(-9deg);
+}
+.photo-7 {
+	transform: rotate(-6deg);
+}
+.photo-8 {
+	transform: rotate(3deg);
+}
+
+.photo-modal {
+	position: fixed;
+	z-index: 20;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(56, 30, 23, 0.8);
+	visibility: hidden;
+	opacity: 0;
+	transition: 1s;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.full-image {
+	max-height: 95vh;
+	max-width: 95vw;
+}
+
+.show-modal {
+	visibility: visible;
+	opacity: 1;
+}
+
+section {
+	padding: 1rem;
+}
+
+.footer {
+	color: rgb(255, 255, 255);
+	background-color: rgb(56, 30, 23);
+	border-bottom: 6px solid rgb(255, 146, 56);
+}
+
+.footer h3 {
+	color: rgb(255, 186, 135);
+}
+
+/* App Cosmetics */
+
+.app {
+	height: 100vh;
+	overflow: auto;
+	background-color: rgb(204, 95, 12);
+	color: rgb(255, 255, 255);
+}
+
+.app-flex-wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
+.app-instructions {
+	width: 90vw;
+}
+
+.app-controls {
+	text-align: center;
+	width: 90vw;
+}
+
+.app button {
+	background-color: rgb(255, 119, 15);
+	border: 0;
+	border-bottom: 2px solid rgb(56, 30, 23);
+	color: rgb(255, 255, 255);
+	font-family: adelle-sans, sans-serif;
+	font-weight: 400;
+	border-radius: 3px;
+	padding: 8px;
+}
+
+.app button:hover {
+	background-color: rgb(255, 186, 135);
+	border-bottom: 2px solid rgb(95, 75, 69);
+}
+
+.disabled {
+	cursor: not-allowed;
+	opacity: 0.5;
+}
+
+.timer-display {
+	font-family: adelle-sans, sans-serif;
+	font-weight: 700;
+	font-size: 96px;
+	color: rgb(255, 255, 255);
+}
+
+.alert {
+	font-family: adelle-sans, sans-serif;
+	font-size: 32px;
+	font-weight: 400;
+	color: rgb(255, 255, 255);
+	opacity: 0;
+}
+
+/* Step transition controls */
+
+.step {
+	display: none;
+	opacity: 0;
+	transition: opacity 1s;
+}
+
+.current {
+	display: block;
+	opacity: 1;
+	animation: fadein 1.5s ease-out;
+}
+
+@keyframes fadein {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+/* Alert Message Animation */
+
+.alert-active {
+	animation: blinkfade 10s linear normal 1;
+}
+
+@keyframes blinkfade {
+	0% {
+		opacity: 0;
+	}
+	5% {
+		opacity: 1;
+	}
+	10% {
+		opacity: 0;
+	}
+	15% {
+		opacity: 1;
+	}
+	20% {
+		opacity: 0;
+	}
+	25% {
+		opacity: 1;
+	}
+	90% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+.alert-active-long {
+	animation: blinkfadelong 60s linear normal 1;
+}
+
+@keyframes blinkfadelong {
+	0% {
+		opacity: 0;
+	}
+	0.83333% {
+		opacity: 1;
+	}
+	1.66666% {
+		opacity: 0;
+	}
+	2.49333% {
+		opacity: 1;
+	}
+	3.3332% {
+		opacity: 0;
+	}
+	4.16656% {
+		opacity: 1;
+	}
+	98.3333% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+/* Layout rules for mid-size (480-768) */
+@media screen AND (min-width: 480px) {
+	.intro {
+		column-count: 1;
+		column-gap: 0;
+	}
+
+	.sample-grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 1rem;
+	}
+
+	.sample-photo {
+		width: 36vw;
+	}
+
+	.app-instructions {
+		width: 90vw;
+	}
+
+	.app-controls {
+		width: 90vw;
+	}
+
+	.timer-display {
+		font-size: 112px;
+	}
+}
+
+/* Layout rules for Tablet (768-960)*/
+@media screen AND (min-width: 768px) {
+	section {
+		padding: 1rem 1.5rem;
+	}
+
+	.columns {
+		column-count: 2;
+		column-gap: 2rem;
+	}
+	.sample-grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-gap: 1rem;
+		margin-top: 2rem;
+	}
+
+	.sample-photo {
+		width: 25vw;
+	}
+
+	.app {
+		height: 50vh;
+	}
+
+	.app-instructions {
+		width: 45vw;
+	}
+
+	.app-controls {
+		width: 45vw;
+	}
+
+	.timer-display {
+		font-size: 128px;
+	}
+}
+
+/* Layout rules for Desktop (960+) */
+@media screen AND (min-width: 960px) {
+	.main-menu {
+		text-align: left;
+		display: block;
+		position: fixed;
+		top: 0;
+		background-color: rgba(255, 255, 255, 0.9);
+		width: 100%;
+		padding: 0rem 2rem;
+		z-index: 15;
+		border-radius: 0;
+	}
+
+	.main-menu li {
+		display: inline-block;
+		margin-right: 0.5rem;
+	}
+
+	.toggle-icon {
+		display: none;
+	}
+
+	.menu-icon {
+		display: inline-block;
+		height: 1rem;
+		width: 1rem;
+	}
+
+	section {
+		padding: 1rem 2rem;
+	}
+
+	.columns {
+		column-count: 3;
+		column-gap: 2rem;
+	}
+
+	.sample-grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-gap: 0.5rem;
+		margin-top: 2rem;
+	}
+
+	.sample-photo {
+		width: 25vw;
+	}
+
+	.app {
+		height: 50vh;
+	}
+
+	.app-instructions {
+		width: 45vw;
+	}
+
+	.app-controls {
+		width: 45vw;
+	}
+
+	.timer-display {
+		font-size: 128px;
+	}
+}
+
+/* Layout rules for extra-wide screens (1200+) */
+@media screen AND (min-width: 1200px) {
+	.main-menu {
+		display: block;
+		position: fixed;
+		top: 0;
+		background-color: rgba(255, 255, 255, 0.9);
+		width: 100%;
+		padding: 0rem 3rem;
+		z-index: 15;
+	}
+
+	.main-menu li {
+		display: inline-block;
+		margin-right: 0.5rem;
+	}
+
+	.toggle-icon {
+		display: none;
+	}
+
+	.menu-icon {
+		display: inline-block;
+		height: 1rem;
+		width: 1rem;
+	}
+
+	section {
+		padding: 1rem 3rem;
+	}
+
+	.columns {
+		column-count: 3;
+		column-gap: 2rem;
+	}
+
+	.sample-grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		grid-gap: 0.5rem;
+		margin-top: 3rem;
+	}
+
+	.sample-photo {
+		width: 20vw;
+	}
+
+	.app {
+		height: 50vh;
+	}
+
+	.app-instructions {
+		width: 45vw;
+	}
+
+	.app-controls {
+		width: 45vw;
+	}
+
+	.timer-display {
+		font-size: 128px;
+	}
+}
