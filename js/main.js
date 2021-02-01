@@ -70,7 +70,7 @@ function backStep() {
 		steps[currentStep].classList.add('current');
 	} else if (currentStep === 3) {
 		timerCurrent = 0;
-		timerDisplay.innerHTML = '00:00';
+		timerDisplay.innerHTML = '--:--';
 		timerDisplay.classList.add('disabled');
 		nextButton.disabled = false;
 		startButton.disabled = true;
@@ -98,7 +98,7 @@ function backStep() {
 		steps[currentStep].classList.add('current');
 	} else if (currentStep === 1) {
 		timerCurrent = 0;
-		timerDisplay.innerHTML = '00:00';
+		timerDisplay.innerHTML = '--:--';
 		timerDisplay.classList.add('disabled');
 		backButton.disabled = true;
 		startButton.disabled = true;
@@ -154,7 +154,7 @@ function nextStep() {
 	} else if (currentStep === steps.length - 2) {
 		console.log('no more steps');
 		timerCurrent = 0;
-		timerDisplay.innerHTML = '00:00';
+		timerDisplay.innerHTML = '--:--';
 		timerDisplay.classList.add('disabled');
 		nextButton.disabled = true;
 		startButton.disabled = true;
@@ -166,7 +166,7 @@ function nextStep() {
 		steps[currentStep].classList.add('current');
 	} else {
 		timerCurrent = 0;
-		timerDisplay.innerHTML = '00:00';
+		timerDisplay.innerHTML = '--:--';
 		timerDisplay.classList.add('disabled');
 		backButton.disabled = false;
 		startButton.disabled = true;

@@ -269,6 +269,7 @@ section {
 	font-family: adelle-sans, sans-serif;
 	font-weight: 700;
 	font-size: 96px;
+	font-variant-numeric: tabular-nums;
 	color: rgb(255, 255, 255);
 }
 
